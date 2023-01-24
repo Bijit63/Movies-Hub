@@ -27,7 +27,7 @@ import Contact from './components/Contact';
 function App() {
   return (
    <div className='overflow-hidden min-h-[100vh]  max-w-[100vw] '>
-   <Router>
+   <Router basename='/Movies-Hub' >
 
     {/* <LoadingBar/> */}
 
@@ -43,25 +43,25 @@ function App() {
           </Route>
 
 
-          <Route exact path="/toprated-movies">
+          <Route path="/toprated-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Top-Rated Movies" url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
 
 
-          <Route exact path="/nowplaying">
+          <Route path="/nowplaying">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Now Playing Movies" url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
       
 
-          <Route exact path="/popular-movies">
+          <Route path="/popular-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Popular Movies" url={`https://api.themoviedb.org/3/movie/popular?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
 
 
-          <Route exact path="/upcoming-movies">
+          <Route path="/upcoming-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Upcoming Movies" url={`https://api.themoviedb.org/3/movie/upcoming?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
