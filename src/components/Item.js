@@ -4,7 +4,6 @@ import Itemcard from "./Itemcard";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "../images/Loader.gif"
 // import Loading from "./LoadingBar"
-import filter from '../images/Filter.png'
 
 
 
@@ -106,13 +105,7 @@ const Item = (props) => {
            }
 
 
-           const clickedd=()=>{
-            
-            document.getElementById('filtersec').className==="max-h-[0px] w-[88vw] justify-around flex duration-100 text-md  overflow-hidden px-[15px]"?document.getElementById('filtersec').className="h-fit w-[88vw] justify-around flex duration-100 text-md  overflow-hidden px-[15px]":document.getElementById('filtersec').className="max-h-[0px] w-[88vw] justify-around flex duration-100 text-md  overflow-hidden px-[15px]"
-
-
-
-           }
+          
      
     
 

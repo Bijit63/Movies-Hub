@@ -40,6 +40,7 @@ const Iteminfo = (props) => {
 
 
       document.getElementById('iteminfomain').className=  ` hidden min-h-[100vh] flex flex-col mx-auto `
+      // eslint-disable-next-line
         fetch(`https://api.themoviedb.org/3/movie/${paramsID}?api_key=7e5e27e6b51bcfd87532d3a63a2c2646&language=en-US`).
         then(data=> {
           return data.json()}).then(info=> {setdetails(info);

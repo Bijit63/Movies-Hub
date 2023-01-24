@@ -16,7 +16,7 @@ const Trendingmovie = () => {
     const [Movie2, setMovie2] = useState({})
     const [Movie3, setMovie3] = useState({})
     const [Movie4, setMovie4] = useState({})
-    const [dotn, setdotn] = useState(1)
+    
    
     const clicked=()=>{
       document.getElementById('leftmenu').className=" translate-x-[1000px] ease-in-out duration-100 absolute top-0 right-0 flex flex-col  bg-[#82C3EC] h-[100vh] w-[200px] md:w-[350px]"
@@ -94,32 +94,7 @@ const Trendingmovie = () => {
  
    
 
-    const rightarr=()=>{
-
-      document.getElementById('itemss').scrollLeft=document.getElementById('itemss').scrollLeft+ window.innerWidth ;
-      // if(document.getElementById('itemss').scrollLeft+window.innerWidth<(window.innerWidth*3)+1)
-      // {
-      //   setdotn(dotn+1)
-      //   document.getElementById(`dot${dotn+1}`).checked =true;
-        
-      // }
-      
-    }
     
-    
-    const leftarr=()=>{
-      
-      document.getElementById('itemss').scrollLeft=document.getElementById('itemss').scrollLeft-window.innerWidth;
-      // if(document.getElementById('itemss').scrollLeft+window.innerWidth>window.innerWidth)
-
-      // { 
-      //   setdotn(dotn-1)
-      //   document.getElementById(`dot${dotn-1}`).checked =true;
-        
-      // }
-    
-    }
-
 
  
       

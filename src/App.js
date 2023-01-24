@@ -43,25 +43,25 @@ function App() {
           </Route>
 
 
-          <Route path="/toprated-movies">
+          <Route exact path="/toprated-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Top-Rated Movies" url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
 
 
-          <Route path="/nowplaying">
+          <Route exact path="/nowplaying">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Now Playing Movies" url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
       
 
-          <Route path="/popular-movies">
+          <Route exact path="/popular-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Popular Movies" url={`https://api.themoviedb.org/3/movie/popular?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
 
 
-          <Route path="/upcoming-movies">
+          <Route exact path="/upcoming-movies">
           <Searchbar/>
           <Item display='flex' height={'min-h-[100vh]'} moviestype="Upcoming Movies" url={`https://api.themoviedb.org/3/movie/upcoming?api_key=7e5e27e6b51bcfd87532d3a63a2c2646`} />
           </Route>
@@ -70,7 +70,7 @@ function App() {
 
 
 
-          <Route path={`/search=:searchquery`}>
+          <Route exact path={`/search=:searchquery`}>
           <Searchbar/>
           <SearchedMovies/>
           </Route>  
@@ -78,14 +78,14 @@ function App() {
 
 
 
-          <Route path={`/details/:id/:name`}>
+          <Route exact path={`/details/:id/:name`}>
         
           <Iteminfo   />
           </Route> 
 
 
 
-          <Route path={`/contact-us`}>
+          <Route exact path={`/contact-us`}>
         
           <Contact/>
           </Route> 
