@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
 import Notestate from './context/Notes/Notestate';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   

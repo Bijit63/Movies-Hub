@@ -9,19 +9,19 @@ const Navbar = () => {
     
     useEffect(() => {
 
-        window.location.pathname==='/'?document.getElementById('a0').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a0').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+        window.location.hash==='#/'?document.getElementById('a0').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a0').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 
-        window.location.pathname==='/toprated-movies'?document.getElementById('a1').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a1').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+        window.location.hash==='#/toprated-movies'?document.getElementById('a1').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a1').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 
-        window.location.pathname==='/popular-movies'?document.getElementById('a2').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a2').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+        window.location.hash==='#/popular-movies'?document.getElementById('a2').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a2').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 
-        window.location.pathname==='/upcoming-movies'?document.getElementById('a3').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a3').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+        window.location.hash==='#/upcoming-movies'?document.getElementById('a3').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a3').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 
-        window.location.pathname==='/nowplaying'?document.getElementById('a4').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a4').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+        window.location.hash==='#/nowplaying'?document.getElementById('a4').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a4').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
         
 
 
