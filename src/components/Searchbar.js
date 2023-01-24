@@ -33,10 +33,10 @@ const Searchbar = () => {
 
 
 
-         <a href={`/search=${value}`}> <div id='searchicon' className=' hidden cursor-pointer  bg-[#0e082437] h-[30px] md:h-[50px]  md:border-l-[1px] w-[25px] md:flex justify-center   md:rounded-r-full items-center md:w-[50px] ' >
+         <Link to={`/search=${value}`}> <div id='searchicon' className=' hidden cursor-pointer  bg-[#0e082437] h-[30px] md:h-[50px]  md:border-l-[1px] w-[25px] md:flex justify-center   md:rounded-r-full items-center md:w-[50px] ' >
         <img src={search} className=" h-[15px] md:h-[16px] rounded-r-2xl  " alt="" />
 
-        </div></a> 
+        </div></Link> 
 
         {/* {a.searchmovie(value)} */}
     </form>

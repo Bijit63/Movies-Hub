@@ -180,7 +180,7 @@ const Trendingmovie = () => {
       </div>
 
         <div className=' flex ' >
-          <a href={`/details/${Movie1.id}/${Movie1.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie1.poster_path)} alt="" /></a>
+          <Link to={`/details/${Movie1.id}/${Movie1.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie1.poster_path)} alt="" /></Link>
         </div>
   </div>
     
@@ -207,7 +207,7 @@ const Trendingmovie = () => {
       </div>
 
         <div className=' flex ' >
-          <a href={`/details/${Movie2.id}/${Movie2.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie2.poster_path)} alt="" /></a>
+          <Link to={`/details/${Movie2.id}/${Movie2.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie2.poster_path)} alt="" /></Link>
         </div>
   </div>
     
@@ -242,7 +242,7 @@ const Trendingmovie = () => {
       </div>
 
         <div className=' flex ' >
-          <a href={`/details/${Movie3.id}/${Movie3.title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie3.poster_path)} alt="" /></a>
+          <Link to={`/details/${Movie3.id}/${Movie3.title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie3.poster_path)} alt="" /></Link>
         </div>
   </div>
     
@@ -271,7 +271,7 @@ const Trendingmovie = () => {
     </div>
 
       <div className=' flex ' >
-        <a href={`/details/${Movie4.id}/${Movie4.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie4.poster_path)} alt="" /></a>
+        <Link to={`/details/${Movie4.id}/${Movie4.original_title}`} className=' ' ><img id='trendimg' className=' rounded-lg lg:h-[250px] h-[132px] max-w-[100px] min-w-[100px] md:max-w-[160px] md:min-w-[160px] lg:max-w-[180px] lg:min-w-[180px] ' src={'https://image.tmdb.org/t/p/original'.concat(Movie4.poster_path)} alt="" /></Link>
       </div>
 </div>
   

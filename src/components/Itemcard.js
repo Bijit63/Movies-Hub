@@ -19,7 +19,7 @@ const Itemcard = (props) => {
   
   return (
 
-      <a onClick={clicked} href={`/details/${props.id}/${props.title}`}>
+      <Link onClick={clicked} to={`/details/${props.id}/${props.title}`}>
 
 
         <div onClick={clicked} id='hhh' className=' rounded-[3px] md:my-[20px] flex md:mx-[18px] mx-[5px] my-[6px] md:w-[190px] h-[170px] max-w-[120px] md:max-w-[190px] md:h-[270px]  flex-col  ' >
@@ -48,7 +48,7 @@ const Itemcard = (props) => {
 </div>
 
 
-            </a> 
+            </Link> 
   )
 }
 
