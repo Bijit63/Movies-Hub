@@ -22,10 +22,10 @@ const Item = (props) => {
     const [genre, setgenre] = useState([]);
    
 
-
+    
 
     const fetchData=()=>{
-
+      
       fetch(props.url+`&page=${page}`)
         .then((info) => {
           return info.json();
@@ -39,13 +39,12 @@ const Item = (props) => {
                           props.limit==="yes"?setitems(data.results.slice(0,6)):setitems(data.results)
 
                             settotalresults(data.total_results)
-                          // console.log(data.results)
-                          // console.log(page)
+                          
                           setpage(page+1)
                           
                           
                           //Total no. of articles on the page needed
-                          // console.log()
+                         
                                               }
       );
 
@@ -67,20 +66,30 @@ const Item = (props) => {
 
     useEffect(() => {
 
-     fetchData();
       
+
+     fetchData();
+     
          // eslint-disable-next-line 
     },[]);
+
+
+    
+
+    
+    
 
 
     const no= ()=>{}
     const yes = (p) => {
 
       setpage(page+1);
+
+      
       
       setTimeout(() => {
         
-        console.log(page)
+        
        
         
         fetch(props.url+`&page=${page}`)
