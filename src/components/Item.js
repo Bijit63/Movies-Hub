@@ -23,6 +23,24 @@ const Item = (props) => {
    
 
     
+    // To refresh the page 
+
+    useEffect(() => {
+
+      if(localStorage.getItem('loc')!==window.location.href ) 
+     {
+       window.location.reload(false)
+      
+     }
+    
+      localStorage.setItem('loc',window.location.href);
+    
+    })
+
+
+
+
+
 
     const fetchData=()=>{
       
@@ -33,7 +51,7 @@ const Item = (props) => {
         })
 
 
-
+        
 
         .then((data) =>  {
                           props.limit==="yes"?setitems(data.results.slice(0,6)):setitems(data.results)
