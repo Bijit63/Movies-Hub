@@ -19,12 +19,31 @@ import Iteminfo from './components/Iteminfo';
 import Footer from './components/Footer';
 import Trendingmovie from './components/Trendingmovie';
 import Contact from './components/Contact';
+import { useEffect } from 'react';
 
 
 
 
 
 function App() {
+  
+  
+  
+  useEffect(() => {
+
+    if(localStorage.getItem('loc')!==window.location.href ) 
+   {
+     window.location.reload(false)
+    
+   }
+  //  else {
+  //  }
+    localStorage.setItem('loc',window.location.href);
+  //   console.log(localStorage.getItem('loc'))
+  //   console.log('hello')
+    
+  })
+
   return (
    <div className='overflow-hidden min-h-[100vh]  max-w-[100vw] '>
    <Router basename='/Movies-Hub' >
@@ -35,8 +54,8 @@ function App() {
   <Navbar/>
   
   
-  <Switch>
-          <Route  exact path="/">
+  <Switch >
+          <Route  exact path="/" >
           <Trendingmovie/>
           <Searchbar/>
           <HomePage  />

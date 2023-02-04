@@ -12,6 +12,9 @@ const Navbar = () => {
         window.location.hash==='#/'?document.getElementById('a0').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a0').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 
+        window.location.hash==='#/Movies-Hub/' ?document.getElementById('a0').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a0').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
+
+
         window.location.hash==='#/Movies-Hub/toprated-movies'?document.getElementById('a1').className='  text-amber-600 cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]':document.getElementById('a1').className=' text-white cursor-pointer  items-center flex hover:bg-slate-300 hover:text-black  px-2 md:px-5 h-[25px] md:h-[55px]'
 
 

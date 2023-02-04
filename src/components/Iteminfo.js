@@ -20,7 +20,7 @@ const Iteminfo = (props) => {
     let paramsID = useParams().id;
     let paramsName = useParams().name;
 
-    console.log(paramsID,paramsName)
+    
 
 
     
