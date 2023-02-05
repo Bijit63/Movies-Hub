@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Movies-Hub/static/css/main.05ae17b5.css",
-    "main.js": "/Movies-Hub/static/js/main.997ad78c.js",
+    "main.css": "/Movies-Hub/static/css/main.f12bd0b7.css",
+    "main.js": "/Movies-Hub/static/js/main.7783efd0.js",
     "static/js/787.ec704a7a.chunk.js": "/Movies-Hub/static/js/787.ec704a7a.chunk.js",
     "static/media/Loader.gif": "/Movies-Hub/static/media/Loader.a4ba02252d4d6ff101cd.gif",
     "static/media/searchicon.png": "/Movies-Hub/static/media/searchicon.00118c6e26245eb7f00d.png",
     "static/media/profile.webp": "/Movies-Hub/static/media/profile.7a6a6c54279a54d1977c.webp",
     "static/media/More.png": "/Movies-Hub/static/media/More.75b24e16a03af5cabc55.png",
     "index.html": "/Movies-Hub/index.html",
-    "main.05ae17b5.css.map": "/Movies-Hub/static/css/main.05ae17b5.css.map",
-    "main.997ad78c.js.map": "/Movies-Hub/static/js/main.997ad78c.js.map",
+    "main.f12bd0b7.css.map": "/Movies-Hub/static/css/main.f12bd0b7.css.map",
+    "main.7783efd0.js.map": "/Movies-Hub/static/js/main.7783efd0.js.map",
     "787.ec704a7a.chunk.js.map": "/Movies-Hub/static/js/787.ec704a7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05ae17b5.css",
-    "static/js/main.997ad78c.js"
+    "static/css/main.f12bd0b7.css",
+    "static/js/main.7783efd0.js"
   ]
 }
