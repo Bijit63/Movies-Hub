@@ -71,7 +71,7 @@ const Searchbar = () => {
                  <img src={search} alt="" className='h-[12px] mx-[10px] ' />
                  <div>
 
-                  {element.title}
+                  {element.title.length>53?element.title.slice(0,53)+'...':element.title}
                  </div>
                 </div>
                 </Link>

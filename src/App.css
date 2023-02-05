@@ -94,7 +94,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   
 }
 #infosummary{
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Varela Round', sans-serif;
+  word-spacing: 2px;
 }
 #infoprod{
   font-family: 'Secular One', sans-serif;
@@ -419,3 +420,4 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 #searchreco{
   box-shadow: 0px 0px 3px white;
 }
+

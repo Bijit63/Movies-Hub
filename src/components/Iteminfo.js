@@ -361,7 +361,7 @@ const Iteminfo = (props) => {
 
         <div className=' text-center md:text-left mx-[10px] md:mx-0  mt-6 border-2 ' >
            <p className=' md:text-xl bg-black font-serif font-bold border-b-2 px-[10px] py-[5px]' >Summary </p> 
-            <p id='infosummary' className=' md:mt-[5px] px-[11px] py-[4px]  ' >{details.overview}</p>  
+            <p id='infosummary' className=' md:mt-[5px] px-[11px] py-[4px] bg-[#00000066] ' >{details.overview}</p>  
         </div >
 
 
@@ -493,7 +493,7 @@ const Iteminfo = (props) => {
             
 
 
-          <div className=' border-t-2  md:border-none bg-transparent flex flex-col justify-center  ' >
+          <div className='  bg-transparent flex flex-col justify-center  ' >
 
          <h1 id='infotitle' className='   text-center md:mx-auto text-white  h-fit py-2 md:min-w-[1190px] md:max-w-[1190px] md:mt-[50px]   md:text-4xl text-2xl   ' >
             CAST
@@ -537,7 +537,7 @@ const Iteminfo = (props) => {
 
 {/* Similar Movies Part */}
 
-<div className='border-t-2 md:border-none mt-[20px] md:mt-0' >
+<div className=' mt-[30px] md:mt-0' >
 <h1 id='infotitle' className=' text-2xl  text-center  text-white  h-fit py-2  md:mt-[50px]   md:text-4xl   ' >
             SIMILAR MOVIES
         
