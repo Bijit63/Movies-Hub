@@ -49,7 +49,11 @@ const Iteminfo = (props) => {
             setyear(date.getFullYear());
             const rate = info.vote_average;
             setrating(rate.toString().slice(0,3));
-            setgenre(info.genres);
+          
+            
+            let secondElements = info.genres.map(obj => obj.name).join(' , ');
+            setgenre(secondElements);
+            
             document.getElementById('iteminfomain').className=  `min-h-[100vh] flex flex-col mx-auto `
             
 
@@ -214,9 +218,13 @@ const Iteminfo = (props) => {
 
 
     
+
+         
         
     
+         
 
+  
 
 
     
@@ -286,7 +294,10 @@ const Iteminfo = (props) => {
 
         <div className=' border-t-2 md:pt-[15px] py-[5px]  '>
           <span className='border-2 text-xs md:text-base rounded-md mr-[10px] px-[4px] py-[2px] md:px-[5px] md:py-[2px]' >{details.adult===false?"PG - 13":"R - Rated"}</span>
-          <span id='infogenre' className=' text-sm md:text-lg md:px-[4px] md:ml-[20px] md:pt-[3px]'>{genre.map( element=> {return element.name+" " })}</span>
+          <span id='infogenre' className=' text-sm md:text-lg md:px-[4px] md:ml-[20px] md:pt-[3px]'>
+          
+            {genre}
+            </span>
         </div>
         
 

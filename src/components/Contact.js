@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Contact = () => {
   return (
     <div className=' flex flex-col items-center mt-[30px]'>
@@ -27,6 +27,7 @@ const Contact = () => {
 
         <button id='submit' className='text-black font-semibold mt-[30px] bg-slate-100 px-[10px] py-[2px] rounded-sm hover:bg-slate-300 '> Submit </button>
         
+
     </div>
   )
 }

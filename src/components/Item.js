@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Itemcard from "./Itemcard";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "../images/Loader.gif"
+import down from '../images/down.png'
 // import Loading from "./LoadingBar"
 
 
@@ -20,6 +21,7 @@ const Item = (props) => {
     const [page, setpage] = useState(1);
     
     const [genre, setgenre] = useState([]);
+    const [selectedGenres, setSelectedGenres] = useState([]);
    
 
     
@@ -44,7 +46,7 @@ const Item = (props) => {
 
     const fetchData=()=>{
       
-      fetch(props.url+`&page=${page}`)
+      fetch(props.url+`&with_genres=`+selectedGenres.join(',')+`&page=${page}`)
         .then((info) => {
           return info.json();
           
@@ -57,9 +59,10 @@ const Item = (props) => {
                           props.limit==="yes"?setitems(data.results.slice(0,6)):setitems(data.results)
 
                             settotalresults(data.total_results)
-                          
+
+                         
                           setpage(page+1)
-                          
+                     
                           
                           //Total no. of articles on the page needed
                          
@@ -88,8 +91,9 @@ const Item = (props) => {
 
      fetchData();
      
+     
          // eslint-disable-next-line 
-    },[]);
+    },[selectedGenres]);
 
 
     
@@ -110,7 +114,7 @@ const Item = (props) => {
         
        
         
-        fetch(props.url+`&page=${page}`)
+        fetch(props.url+`&with_genres=`+selectedGenres.join(',')+`&page=${page}`)
         .then((info) => {
           return info.json();
         }).then(
@@ -133,8 +137,43 @@ const Item = (props) => {
 
 
           
-     
-    
+           
+           const toggleGenre = genreId => {
+            if (selectedGenres.includes(genreId)) {
+              setSelectedGenres(selectedGenres.filter(id => id !== genreId));
+            } else {
+              setSelectedGenres([...selectedGenres, genreId]);
+            }
+            
+            setpage(page-1)
+
+            
+          };
+
+
+
+
+
+
+
+          const togglefilter=()=>{
+
+            if(document.getElementById('down').className==="duration-100 ease-in-out md:mx-[16px] mx-[7px] md:h-[25px] h-[17px] md:mt-[9px]")
+            { 
+
+            document.getElementById('filter').className=`${props.filter==='yes'?'flex':'hidden'}  text-white flex overflow-hidden py-[10px] md:py-[12px] `
+            document.getElementById('down').className="duration-100 ease-in-out rotate-180 md:mx-[16px] mx-[7px] md:h-[25px] h-[17px] md:mt-[9px]"}
+
+
+            else{
+              document.getElementById('filter').className=`${props.filter==='yes'?'flex':'hidden'}  text-white  hidden overflow-hidden py-[10px] md:py-[12px] `
+              document.getElementById('down').className="duration-100 ease-in-out md:mx-[16px] mx-[7px] md:h-[25px] h-[17px] md:mt-[9px]"
+
+            }
+            
+          }
+
+          
 
 
 
@@ -144,52 +183,45 @@ const Item = (props) => {
       
        <div onClick={clicked} className={` ${props.display} flex-col  justify-center items-center md:mt-[50px] mt-[20px]   px-4 my-1 md:my-2` }>
        
-       <div className="flex" >
-          <div id="moviestype" className="md:text-5xl text-2xl ">{props.moviestype}</div>
-          {/* <div className="md:w-[40px] w-[30px] mx-[10px] "  >
-            <img src={filter} onClick={clickedd} alt="" className="cursor-pointer" />
-          </div> */}
+       <div className="flex items-center" >
+          <div id="moviestype" className="md:text-5xl text-2xl ">{props.moviestype} </div>
+          <img id="down" onClick={togglefilter} src={down} alt="" className="duration-100 ease-in-out md:mx-[16px] mx-[7px] md:h-[25px] h-[17px] md:mt-[9px]" />
+          
        </div>
 
 
-       {/* <div id="filtersec" className="max-h-[0px] w-[88vw] justify-around flex duration-100 text-md  overflow-hidden px-[15px]">
+
+       <div id="filter" className={`${props.filter==='yes'?'flex':'hidden'}  text-white  hidden overflow-hidden py-[10px] md:py-[12px] `}>
+
+       <div id="filtergen" className=" md:mx-[25px] mx-[18px] ">
+      <div className="flex flex-wrap">
         
-           <div className="text-[18px] flex flex-col w-[40vw] text-white mt-[5px] " >
-             <h1 className="text-center" >Sort By </h1> 
-            <p className='bg-red-200 flex  mt-[5px]'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi error aliquid molestiae perspiciatis repellendus impedit minus ipsum illo maiores, odio deserunt ea, hic voluptatum natus porro quisquam mollitia enim pariatur nostrum? Minus sit porro nisi aspernatur commodi. Incidunt, veritatis, quam molestiae, mollitia beatae dicta facere voluptatibus sed earum asper
-            </p>
-           </div>
+        {genre.map(genres => (
+          <button id="genrefilter"
+            key={genres.id} 
+            className={`md:px-[6px] px-[5px] md:py-[5px] py-[4px] md:mx-[10px] mx-[5px] my-[3px] md:my-[5px] text-white md:text-sm text-xs   rounded ${
+              selectedGenres.includes(genres.id)
+                ? 'bg-[#100a46]'
+                : 'bg-[#2012a3] hover:bg-[#170c77]'
+            }`}
+            onClick={() => toggleGenre(genres.id)}
+          >
+            {genres.name }
+             <span className={`${selectedGenres.includes(genres.id)? ``:`hidden`}  `}>&nbsp;&nbsp;&#215;</span>
+          </button>
+        ))}
+      </div>
+    </div>
+        
+       </div>
 
 
-
-           <div className="text-[18px] flex flex-col w-[40vw] text-white mt-[5px] " >
-            <h1 className="text-center" >Genre</h1> 
-            <div id="genres" className=" flex flex-wrap mt-[5px] justify-start ">
-            <p className="mx-[9px] my-[4px]" >Action</p>
-            <p className="mx-[9px] my-[4px]" >Adventure</p>
-            <p className="mx-[9px] my-[4px]" >Animation</p>
-            <p className="mx-[9px] my-[4px]" >Comedy</p>
-            <p className="mx-[9px] my-[4px]" >Crime</p>
-            <p className="mx-[9px] my-[4px]" >Documentary</p>
-            <p className="mx-[9px] my-[4px]" >Drama</p>
-            <p className="mx-[9px] my-[4px]" >Family</p>
-            <p className="mx-[9px] my-[4px]" >Fantasy</p>
-            <p className="mx-[9px] my-[4px]" >History</p>
-            <p className="mx-[9px] my-[4px]" >Horror</p>
-            <p className="mx-[9px] my-[4px]" >Music</p>
-            <p className="mx-[9px] my-[4px]" >Mystery</p>
-            <p className="mx-[9px] my-[4px]" >Romance</p>
-            <p className="mx-[9px] my-[4px]" >Science-Fiction</p>
-            <p className="mx-[9px] my-[4px]" >Thriller</p>
-            <p className="mx-[9px] my-[4px]" >War</p>
-            <p className="mx-[9px] my-[4px]" >Western</p>
-            </div>
-           </div>
        
 
 
-        </div> */}
+
+
+        
 
 
         
